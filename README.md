@@ -13,3 +13,7 @@ The project is implemented in 4 key segments :-
 - ii) `Recognition of digits(1-9)` from images of all 81 cells. Then a matrix of integers is made, inserting them one by one into it.
 - iii) The matrix of integers (which represents the puzzle) is `fed to the optimized backtracking algorithm`  for getting a solution matrix.
 - iv) The solution matrix has to be `overlaid onto the live image of the puzzle board on the screen`, only highlighting the filled vacancies in green, using OpenCV again.
+
+#### Elaborating on points (i) and (ii) above :-
+In the pre-processing phase, image is binarized (RGB to grayscale), Gaussian blur is applied (to denoise unnecessary details), then contour mapping (for detecting borders (edges and vertices) of the board and that of each cell) and perspective warping. Next, the board is split into 81 images (each representing a  cell)
+Next, the array of images is fed, one image at a time, to the digit recognizer[1] (CNN(Convolutional Neural Network) based model trained on the MNIST dataset[3]) for identifying its numeric value (1-9).
