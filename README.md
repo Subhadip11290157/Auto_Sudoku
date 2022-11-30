@@ -24,4 +24,4 @@ The project is implemented in 4 key segments :-
 In the pre-processing phase, image is binarized (RGB to grayscale), Gaussian blur is applied (to denoise unnecessary details), then contour mapping (for detecting borders (edges and vertices) of the board and that of each cell) and perspective warping. Next, the board is split into 81 images (each representing a cell)
 Next, the array of images is fed, one image at a time, to the digit recognizer[1] (CNN(Convolutional Neural Network) based model trained on the MNIST dataset[3]) for identifying its numeric value (1-9).
 
-<img align="left" height="68px" src="./resources/logo_iemphys19.png"  />
+<img align="left" height="68px" src="./resources/grouped/full.png"/>
