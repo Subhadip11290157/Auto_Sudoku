@@ -62,3 +62,5 @@ Considering hardware limitations, we're able to achieve a decent performance of 
 ## Scopes for Extension
 
 QR-code scanning and identifying ArUco Markers are extended outcomes of the same idea that has led to quick and easy authentication of credentials and identity verification interfaces. Talking of board games, we can replace Sudoku with Chess and get live suggestions for the next move on screen (provided, the algorithm for Sudoku solving is replaced with the rules of Chess). Not to mention, we can do this with Tic-Tac-Toe as well. This shows how extensible the project is, as it’s applicable to almost any board game that involves informed decision making based on a definite set of rules and board positions. Even the model can be tweaked in a way to reveal only one cell value (instead of the complete solution) at a time which in turn will help the player to learn to play the moves one by one and reach the solution. This indeed is a promising feature to be adopted by games for interactivity in future.
+
+---
