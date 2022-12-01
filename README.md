@@ -15,19 +15,38 @@ Considering the fact that Sudokus come in newspapers, magazines, books or even o
 The project is implemented in 4 key segments :-
 
 - i) `Tracking the board` (in the frames of live video capture) and each and every box/cell in it distinctly. This also involves filters and pre-processing of the captured image with the help of OpenCV library functions.
+
 - ii) `Recognition of digits(1-9)` from images of all 81 cells. Then a matrix of integers is made, inserting them one by one into it.
+
 - iii) The matrix of integers (which represents the puzzle) is `fed to the optimized backtracking algorithm` for getting a solution matrix.
+
 - iv) The solution matrix has to be `overlaid onto the live image of the puzzle board on the screen`, only highlighting the filled vacancies in green, using OpenCV again.
 
-<img align="left" src="./resources/grouped/all_combined.png"/>
+<br>
 
-Fig. (i) Different phases an image goes through from input to outcome
+<img align="center" width="1400px" src="./resources/grouped/raw_gray.png"/>
+
+> <p align="center"> Fig. (i) Conversion to Grayscale Image (since color adds unnecessary complexity here) </p>
 
 <br>
+
+<img align="center" width="1400px" src="./resources/grouped/contours_corners.png"/>
+
+> <p align="center">Fig. (ii) Drawing contours on blurred and grayscaled image for easy detection of board borders and corners </p>
+
 <br>
+
+<img align="left" height="444px" width="444px" src="./resources/singled/raw_cropped.png"/>
+<img align="center" height="444px" width="444px" src="./resources/singled/question_matrix.png"/>
+<img align="right" height="444px" width="444px"src="./resources/singled/soln_mat.png"/>
+
+> <p align="center">Fig. (iii) On the left : image of the puzzle (pre-recognition) At the center : image of the puzzle (post-recognition) On the right : image of the overlay matrix showing solved cells</p>
+
 <br>
-<br>
-<br>
+
+<img align="center" width="1400px" src="./resources/grouped/pre_overlay_post_overlay.png"/>
+
+> <p align="center"> Fig. (iv) Overlaying the solution matrix on top of the original board cell co-ordinates </p>
 
 #### Elaborating on points (i) and (ii) above :-
 
@@ -38,10 +57,7 @@ Next, the array of images is fed, one image at a time, to the digit recognizer[1
 
 The CNN used for object localization has ~ 0.9933 (99.33%) accuracy in correctly classifying the test dataset.
 The exceptional accuracy is not a matter of surprise, since the images we used from newspapers and magazines had printed numbers that are obviously always better recognized than the handwritten ones.
-
-<img align="left" src="./resources/singled/raw_cropped.png"/>
-<img align="center" src="./resources/singled/question_matrix.png"/>
-<img align="right" src="./resources/singled/soln_mat.png"/>
+Considering hardware limitations, we're able to achieve a decent performance of around 27 FPS.
 
 ## Scopes for Extension
 
