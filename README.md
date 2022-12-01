@@ -1,4 +1,4 @@
-# Sudo-in-Seconds
+# Real-time Sudoku Solver using OpenCV and optimized Backtracking with an interactive input interface (webcam-based)
 
 Sudoku is a popular puzzle that has held the interest of mathematicians for its complex possibilities of intermediate states. Generally, it takes from some minutes to even many hours to solve a single Sudoku based on its difficulty level. But, when it comes to computers, we can compute a solution in seconds. Thanks to the different algorithms that do so[2]. But that’s only when we have a proper matrix of integers (representing the board) available as an input to the algorithm. How often do we get a Sudoku board in such a format? Never. Thus, to address this issue, we have developed an all-in-one Sudoku solver! But first of all, let’s dive into the rules of the game.
 
