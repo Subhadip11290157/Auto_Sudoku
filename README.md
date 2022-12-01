@@ -19,9 +19,26 @@ The project is implemented in 4 key segments :-
 - iii) The matrix of integers (which represents the puzzle) is `fed to the optimized backtracking algorithm` for getting a solution matrix.
 - iv) The solution matrix has to be `overlaid onto the live image of the puzzle board on the screen`, only highlighting the filled vacancies in green, using OpenCV again.
 
+<img align="left" src="./resources/grouped/full.png"/>
+
+Fig. (i) Different phases an image goes through from input to outcome
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
 #### Elaborating on points (i) and (ii) above :-
 
 In the pre-processing phase, image is binarized (RGB to grayscale), Gaussian blur is applied (to denoise unnecessary details), then contour mapping (for detecting borders (edges and vertices) of the board and that of each cell) and perspective warping. Next, the board is split into 81 images (each representing a cell)
 Next, the array of images is fed, one image at a time, to the digit recognizer[1] (CNN(Convolutional Neural Network) based model trained on the MNIST dataset[3]) for identifying its numeric value (1-9).
 
-<img align="left" height="68px" src="./resources/grouped/full.png"/>
+## Observation
+
+The CNN used for object localization has ~ 0.9933 (99.33%) accuracy in correctly classifying the test dataset and an average of 0.87 Intersection over Union (IoU) for finding the bounding box.
+The exceptional accuracy is not a matter of surprise, since the images we used from newspapers and magazines had printed numbers that are obviously always better recognized than the handwritten ones.
+
+## Scopes for Extension
+
+QR-code scanning and identifying ArUco Markers are extended outcomes of the same idea that has led to quick and easy authentication of credentials and identity verification interfaces. Talking of board games, we can replace Sudoku with Chess and get live suggestions for the next move on screen (provided, the algorithm for Sudoku solving is replaced with the rules of Chess). Not to mention, we can do this with Tic-Tac-Toe as well. This shows how extensible the project is, as it’s applicable to almost any board game that involves informed decision making based on a definite set of rules and board positions. Even the model can be tweaked in a way to reveal only one cell value (instead of the complete solution) at a time which in turn will help the player to learn to play the moves one by one and reach the solution. This indeed is a promising feature to be adopted by games for interactivity in future.
