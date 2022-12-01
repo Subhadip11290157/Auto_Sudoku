@@ -36,8 +36,12 @@ Next, the array of images is fed, one image at a time, to the digit recognizer[1
 
 ## Observation
 
-The CNN used for object localization has ~ 0.9933 (99.33%) accuracy in correctly classifying the test dataset and an average of 0.87 Intersection over Union (IoU) for finding the bounding box.
+The CNN used for object localization has ~ 0.9933 (99.33%) accuracy in correctly classifying the test dataset.
 The exceptional accuracy is not a matter of surprise, since the images we used from newspapers and magazines had printed numbers that are obviously always better recognized than the handwritten ones.
+
+<img align="left", scr="./resources/singled/raw-cropped.png"/>
+<img align="centre", scr="./resources/singled/question-matrix.png"/>
+<img align="right", scr="./resources/singled/soln-matrix.png"/>
 
 ## Scopes for Extension
 
