@@ -19,7 +19,7 @@ The project is implemented in 4 key segments :-
 - iii) The matrix of integers (which represents the puzzle) is `fed to the optimized backtracking algorithm` for getting a solution matrix.
 - iv) The solution matrix has to be `overlaid onto the live image of the puzzle board on the screen`, only highlighting the filled vacancies in green, using OpenCV again.
 
-<img align="left" src="./resources/grouped/full.png"/>
+<img align="left" src="./resources/grouped/all_combined.png"/>
 
 Fig. (i) Different phases an image goes through from input to outcome
 
@@ -39,9 +39,9 @@ Next, the array of images is fed, one image at a time, to the digit recognizer[1
 The CNN used for object localization has ~ 0.9933 (99.33%) accuracy in correctly classifying the test dataset.
 The exceptional accuracy is not a matter of surprise, since the images we used from newspapers and magazines had printed numbers that are obviously always better recognized than the handwritten ones.
 
-<img align="left", scr="./resources/singled/raw-cropped.png"/>
-<img align="centre", scr="./resources/singled/question-matrix.png"/>
-<img align="right", scr="./resources/singled/soln-matrix.png"/>
+<img align="left" src="./resources/singled/raw_cropped.png"/>
+<img align="center" src="./resources/singled/question_matrix.png"/>
+<img align="right" src="./resources/singled/soln_mat.png"/>
 
 ## Scopes for Extension
 
