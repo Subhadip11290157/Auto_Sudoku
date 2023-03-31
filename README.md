@@ -44,7 +44,9 @@ The project is implemented in 4 key segments :-
 
 <br>
 
-<img align="center" width="1400px" src="./resources/grouped/pre_overlay_post_overlay.png"/>
+<!-- <img align="center" width="1400px" src="./resources/grouped/pre_overlay_post_overlay.png"/> -->
+
+<img align="center" width="1400px" src="https://github.com/Subhadip11290157/Auto-Sudoku/blob/c7935810ae798e5dcd0d821b12bce78062580eff/resources/grouped/pre_overlay_post_overlay.png"/>
 
 > <p align="center"> Fig. (iv) Overlaying the solution matrix on top of the original board cell co-ordinates </p>
 
