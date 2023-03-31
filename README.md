@@ -35,10 +35,13 @@ The project is implemented in 4 key segments :-
 > <p align="center">Fig. (ii) Drawing contours on blurred and grayscaled image for easy detection of board borders and corners </p>
 
 <br>
-
+<!--
 <img align="left" height="444px" width="444px" src="./resources/singled/raw_cropped.png"/>
 <img align="center" height="444px" width="444px" src="./resources/singled/question_matrix.png"/>
 <img align="right" height="444px" width="444px"src="./resources/singled/soln_mat.png"/>
+-->
+
+<img align="center" width="1400px" src="./resources/grouped/merge.png"/>
 
 > <p align="center">Fig. (iii) On the left : image of the puzzle (pre-recognition) At the center : image of the puzzle (post-recognition) On the right : image of the overlay matrix showing solved cells</p>
 
