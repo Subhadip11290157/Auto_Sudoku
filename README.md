@@ -26,13 +26,13 @@ The project is implemented in 4 key segments :-
 
 <img align="center" width="1400px" src="./resources/grouped/raw_gray.png"/>
 
-> <p align="center"> Fig. (i) Conversion to Grayscale Image (since color adds unnecessary complexity here) </p>
+> <p align="center"><span style="font-weight: bold;"> <font size="+0.8">Fig. (i) Conversion to Grayscale Image (since color adds unnecessary complexity here)</font> </span> </p>
 
 <br>
 
 <img align="center" width="1400px" src="./resources/grouped/contours_corners.png"/>
 
-> <p align="center">Fig. (ii) Drawing contours on blurred and grayscaled image for easy detection of board borders and corners </p>
+> <p align="center"><span style="font-weight: bold;"> <font size="+0.8">Fig. (ii) Drawing contours on blurred and grayscaled image for easy detection of board borders and corners</font> </span> </p>
 
 <br>
 <!--
@@ -43,15 +43,15 @@ The project is implemented in 4 key segments :-
 
 <img align="center" width="1400px" src="./resources/grouped/merge.png"/>
 
-> <p align="center">Fig. (iii) On the left : image of the puzzle (pre-recognition) At the center : image of the puzzle (post-recognition) On the right : image of the overlay matrix showing solved cells</p>
+> <p align="center"> <span style="font-weight: bold;"> <font size="+0.8">Fig. (iii) On the left : image of the puzzle (pre-recognition) At the center : image of the puzzle (post-recognition) On the right : image of the overlay matrix showing solved cells</font> </span> </p>
 
 <br>
 
 <!-- <img align="center" width="1400px" src="./resources/grouped/pre_overlay_post_overlay.png"/> -->
 
-<img align="center" width="1400px" src="https://github.com/Subhadip11290157/Auto-Sudoku/blob/c7935810ae798e5dcd0d821b12bce78062580eff/resources/grouped/pre_overlay_post_overlay.png"/>
+<img align="center" width="1400px" src="./resources/grouped/pre_overlay_post_overlay.png"/>
 
-> <p align="center"> Fig. (iv) Overlaying the solution matrix on top of the original board cell co-ordinates </p>
+> <p align="center"> <span style="font-weight: bold;"> <font size="+0.8">Fig. (iv) Overlaying the solution matrix on top of the original board cell co-ordinates</font> </span> </p>
 
 #### Elaborating on points (i) and (ii) above :-
 
