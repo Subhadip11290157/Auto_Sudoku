@@ -58,7 +58,7 @@ The project is implemented in 4 key segments :-
 In the pre-processing phase, image is binarized (RGB to grayscale), Gaussian blur is applied (to denoise unnecessary details), then contour mapping (for detecting borders (edges and vertices) of the board and that of each cell) and perspective warping. Next, the board is split into 81 images (each representing a cell)
 Next, the array of images is fed, one image at a time, to the digit recognizer[1] (CNN(Convolutional Neural Network) based model trained on the MNIST dataset[3]) for identifying its numeric value (1-9).
 
-## Alternative implementation
+## Alternative implementation:
 
 Rather than replying on the assumption that the contour spanning maximum area will be the one we're concerned for (which might fail for puzzles with extra borders), there's a more accurate and reliable way to achieve the same outcome - by feeding the frame (captured live on camera) to an object localization model trained on sudoku board images collected from newspapers, magazines, websites or even hand-drawn ones. These can be augmented, if necessary, for variation and volume to attain a decent size of data instances (images) to train and test against.
 
