@@ -58,11 +58,17 @@ The project is implemented in 4 key segments :-
 In the pre-processing phase, image is binarized (RGB to grayscale), Gaussian blur is applied (to denoise unnecessary details), then contour mapping (for detecting borders (edges and vertices) of the board and that of each cell) and perspective warping. Next, the board is split into 81 images (each representing a cell)
 Next, the array of images is fed, one image at a time, to the digit recognizer[1] (CNN(Convolutional Neural Network) based model trained on the MNIST dataset[3]) for identifying its numeric value (1-9).
 
-## Observation
+## Alternative implementation
 
-The CNN used for object localization has ~ 0.9933 (99.33%) accuracy in correctly classifying the test dataset.
-The exceptional accuracy is not a matter of surprise, since the images we used from newspapers and magazines had printed numbers that are obviously always better recognized than the handwritten ones.
-Considering hardware limitations, we're able to achieve a decent performance of around 27 FPS.
+Rather than replying on the assumption that the contour spanning maximum area will be the one we're concerned for (which might fail for puzzles with extra borders), there's a more accurate and reliable way to achieve the same outcome - by feeding the frame (captured live on camera) to an object localization model trained on sudoku board images collected from newspapers, magazines, websites or even hand-drawn ones. These can be augmented, if necessary, for variation and volume to attain a decent size of data instances (images) to train and test against.
+
+Other detection algorithms: Sliding Window - an algorithm that makes use of a fixed set of sizes for windows viz. filters for scanning an image part by part while traversing through it (not quite effective for this problem specifically because it's not easy to predict the exact window-size which would match the actual size of the puzzle). Precision is critical for implementing Augmented Reality on the same detected area over the original image, hence can’t be compromised.
+
+<img align="center" width="1400px" src="./resources/fps_comparisons.png"/>
+
+> <p align="center"> <span style="font-weight: bold;"> <font size="+0.8">Fig. (v) A plot of the average frames per second for each of these detection algorithms.</font> </span> </p>
+
+Besides, YOLO, Selective Search or Region Proposals combined with CNN yield good results. Howevery, they involve heavy computations which in turn slows down performance in terms of number of frames per second. A comparative depiction of the same is provided in the figure above.
 
 ## Scopes for Extension
 
